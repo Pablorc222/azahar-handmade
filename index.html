@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azahar · Moda infantil y complementos hechos a mano</title>
+<meta name="description" content="Tienda de moda infantil y complementos handmade y personalizados en Benacazón, Sevilla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#F7F1E8;
+  --papel:#FFFBF5;
+  --taupe:#8F6F4E;
+  --taupe-osc:#5E4631;
+  --salvia:#9DB3A0;
+  --rosa:#DDA9A3;
+  --azul:#9FB6CF;
+  --tinta:#3A2E24;
+  --f-tit:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --f-cuerpo:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-cuerpo);color:var(--tinta);background:var(--crema);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--taupe);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+/* cabecera */
+header{position:sticky;top:0;z-index:5;background:rgba(247,241,232,.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(143,111,78,.2)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--f-tit);font-size:1.9rem;font-weight:600;color:var(--taupe);text-decoration:none;letter-spacing:.02em}
+nav a{text-decoration:none;margin-left:22px;font-size:.95rem;font-weight:600;color:var(--taupe-osc)}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+@media(max-width:620px){nav a:not(.nav-cta){display:none}}
+.nav-cta{background:var(--taupe);color:#fff;padding:8px 16px;border-radius:999px}
+
+/* portada: la tela vichy es el hilo conductor */
+.vichy{
+  --c:rgba(143,111,78,.22);
+  background-color:var(--papel);
+  background-image:linear-gradient(90deg,var(--c) 50%,transparent 50%),linear-gradient(var(--c) 50%,transparent 50%);
+  background-size:28px 28px;
+}
+.hero{padding:56px 0 64px}
+.hero-card{
+  background:var(--crema);
+  border:2px dashed var(--taupe);
+  outline:10px solid var(--crema);
+  border-radius:6px;
+  padding:56px 28px;
+  text-align:center;
+  max-width:760px;margin:0 auto;
+  box-shadow:0 0 0 12px var(--papel);
+}
+.hero h1{font-family:var(--f-tit);font-weight:600;font-size:clamp(4rem,15vw,8rem);line-height:.95;color:var(--taupe);letter-spacing:.01em}
+.hero p.lema{font-family:var(--f-tit);font-style:italic;font-size:clamp(1.3rem,3.6vw,1.8rem);margin:14px 0 6px;color:var(--taupe-osc)}
+.hero p.sub{max-width:44ch;margin:0 auto 28px}
+.hero p.abierto{display:inline-block;background:var(--taupe-osc);color:var(--crema);padding:4px 14px;border-radius:999px;font-size:.9rem;margin-bottom:22px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:999px;border:2px solid var(--taupe);transition:background .2s,color .2s}
+.btn.pri{background:var(--taupe);color:#fff}
+.btn.pri:hover{background:var(--taupe-osc);border-color:var(--taupe-osc)}
+.btn.sec{color:var(--taupe-osc)}
+.btn.sec:hover{background:var(--taupe);color:#fff}
+
+/* secciones */
+section{padding:72px 0}
+h2{font-family:var(--f-tit);font-weight:600;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.1;color:var(--taupe-osc);margin-bottom:12px}
+.intro{max-width:56ch;margin-bottom:36px}
+
+/* colecciones */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.tile{background:var(--papel);border-radius:10px;overflow:hidden;border:1px solid rgba(143,111,78,.2)}
+.tile .tela{height:130px;border-bottom:1px solid rgba(143,111,78,.2)}
+.tile div.txt{padding:18px 18px 22px}
+.tile h3{font-family:var(--f-tit);font-size:1.6rem;font-weight:600;color:var(--taupe-osc);line-height:1.1;margin-bottom:6px}
+.tile p{font-size:.95rem}
+.t-rosa{--c:rgba(221,169,163,.55)}
+.t-salvia{--c:rgba(157,179,160,.55)}
+.t-azul{--c:rgba(159,182,207,.55)}
+.t-taupe{--c:rgba(143,111,78,.4)}
+.t-crema{--c:rgba(143,111,78,.18)}
+.tela{background-color:var(--papel);background-image:linear-gradient(90deg,var(--c) 50%,transparent 50%),linear-gradient(var(--c) 50%,transparent 50%);background-size:22px 22px}
+
+/* personalizados */
+.pers{background:var(--taupe-osc);color:var(--crema)}
+.pers h2{color:var(--crema)}
+.pers .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:760px){.pers .cols{grid-template-columns:1fr}}
+.pers ul{list-style:none;padding:0}
+.pers li{padding:11px 0;border-bottom:1px dashed rgba(247,241,232,.4)}
+.pers li:last-child{border-bottom:0}
+.pers .btn{margin-top:26px;background:var(--crema);color:var(--taupe-osc);border-color:var(--crema)}
+.pers .btn:hover{background:transparent;color:var(--crema)}
+
+/* horario y ubicación */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+.caja{background:var(--papel);border:1px solid rgba(143,111,78,.25);border-radius:10px;padding:28px}
+.caja h3{font-family:var(--f-tit);font-size:1.8rem;color:var(--taupe-osc);margin-bottom:12px}
+.horario{width:100%;border-collapse:collapse}
+.horario td{padding:9px 0;border-bottom:1px dashed rgba(143,111,78,.35)}
+.horario tr:last-child td{border-bottom:0}
+.horario td:last-child{text-align:right}
+.cerrado{color:#8a5a52}
+
+/* contacto */
+.contacto{text-align:center}
+.contacto .intro{margin-left:auto;margin-right:auto}
+footer{background:var(--taupe-osc);color:var(--crema);padding:30px 0;text-align:center;font-size:.92rem}
+footer .logo{color:var(--crema);font-size:1.6rem}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Azahar</a>
+    <nav aria-label="Principal">
+      <a href="#colecciones">Colecciones</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#visitanos">Visítanos</a>
+      <a class="nav-cta" href="#contacto">Escríbenos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <div class="hero vichy">
+    <div class="wrap">
+      <div class="hero-card">
+        <p class="abierto">Ya estamos abiertos en Benacazón</p>
+        <h1>Azahar</h1>
+        <p class="lema">Moda infantil y complementos hechos a mano</p>
+        <p class="sub">Ropa para bebés y niños, canastillas y detalles personalizados con el nombre de tu peque.</p>
+        <div class="btns">
+          <a class="btn pri" href="#colecciones">Ver colecciones</a>
+          <a class="btn sec" href="#visitanos">Cómo llegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="colecciones">
+    <div class="wrap">
+      <h2>Lo que encontrarás en la tienda</h2>
+      <p class="intro">Una selección de ropa y complementos para los más pequeños, con telas elegidas una a una.</p>
+      <div class="grid">
+        <article class="tile">
+          <div class="tela t-rosa" role="img" aria-label="Tela de cuadros rosa"></div>
+          <div class="txt"><h3>Bebés</h3><p>Ropita suave, canastillas y regalos para recién nacidos.</p></div>
+        </article>
+        <article class="tile">
+          <div class="tela t-azul" role="img" aria-label="Tela de cuadros azul"></div>
+          <div class="txt"><h3>Moda infantil</h3><p>Conjuntos y prendas para el día a día y para las ocasiones especiales.</p></div>
+        </article>
+        <article class="tile">
+          <div class="tela t-salvia" role="img" aria-label="Tela de cuadros verde"></div>
+          <div class="txt"><h3>Neceser y complementos</h3><p>Neceseres, bolsos y accesorios cosidos a mano.</p></div>
+        </article>
+        <article class="tile">
+          <div class="tela t-taupe" role="img" aria-label="Tela de cuadros marrón"></div>
+          <div class="txt"><h3>Telas</h3><p>Elige la tela y la hacemos a tu gusto.</p></div>
+        </article>
+        <article class="tile">
+          <div class="tela t-crema" role="img" aria-label="Tela de cuadros beige"></div>
+          <div class="txt"><h3>Cumpleaños</h3><p>Detalles y looks para celebrar su día.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="personalizados" class="pers">
+    <div class="wrap cols">
+      <div>
+        <h2>Hecho a mano, con su nombre</h2>
+        <p>En Azahar cada pieza se puede personalizar. Dinos qué necesitas y lo preparamos para ti.</p>
+        <a class="btn" href="#contacto">Pide tu personalizado</a>
+      </div>
+      <ul>
+        <li>Nombre bordado en neceseres y mochilas</li>
+        <li>Canastillas y regalos para nacimientos</li>
+        <li>Detalles para cumpleaños y bautizos</li>
+        <li>Tú eliges la tela, nosotros la cosemos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="visitanos">
+    <div class="wrap">
+      <h2>Visítanos en Benacazón</h2>
+      <p class="intro">Pasa por la tienda, mira las telas en persona y llévate tu pedido.</p>
+      <div class="info">
+        <div class="caja">
+          <h3>Horario</h3>
+          <table class="horario">
+            <tr><td>Lunes</td><td class="cerrado">Cerrado</td></tr>
+            <tr><td>Martes a viernes</td><td>9:00 a 14:00 y 17:30 a 20:00</td></tr>
+            <tr><td>Sábados</td><td>10:00 a 13:00</td></tr>
+          </table>
+        </div>
+        <div class="caja">
+          <h3>Dónde estamos</h3>
+          <p>C/ La Carretera, 61<br>Benacazón, Sevilla</p>
+          <p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&query=C%2F+La+Carretera+61+Benacaz%C3%B3n+Sevilla" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto vichy">
+    <div class="wrap">
+      <h2>¿Hablamos?</h2>
+      <p class="intro">Escríbenos por WhatsApp para consultar disponibilidad, tallas o encargar un personalizado.</p>
+      <div class="btns">
+        <a class="btn pri" href="https://wa.me/34600000000" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn sec" href="https://www.instagram.com/azaharhandmade" target="_blank" rel="noopener">@azaharhandmade</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="logo">Azahar</p>
+    <p>Moda infantil y complementos hechos a mano · Benacazón, Sevilla</p>
+  </div>
+</footer>
+
+</body>
+</html>
